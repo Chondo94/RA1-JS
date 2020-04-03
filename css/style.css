@@ -40,16 +40,16 @@ body {
     margin: 0px auto;
 }
 
-.clearfix{
-    float: none;
-    clear: both;
-}
 /* cambio en el estilo de la fuente, para cobertir la letra en un simbolo de endrenage */
 
 .engrenaje, .icon {
     font-family: WebSymbolsRegular;
 }
 
+.clearfix{
+    float: none;
+    clear: both;
+}
 /* -------------------------------------------end-------------------------------------------------- */
 
 /* Estilos de la CABECERA */
@@ -476,6 +476,7 @@ aside h3:first-child {
     font-size: 15px;
 }
 
+/* estilo para el boton de mas comentarios */
 #Mcomentarios{
     height: 100px;
     margin-top: 60px;
@@ -491,4 +492,72 @@ aside h3:first-child {
     letter-spacing: 3px;
     color: #00538c;
     text-decoration: none;
+}
+/* ---------------------------------------------end--------------------------------------------- */
+/* Maquetacion del pie de pagina footer */
+#pie{
+    width: 100%;
+    height: 470px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+#pie .wrap > div{
+    float: left;
+    width: 470px;
+    height: 370px;
+    margin:40px;
+    text-align: center;
+    color: white;
+    font-family: "TrebuchetMS";
+}
+
+#pie a{
+    text-decoration: none;
+    color:#37bcf9;
+    transition: all 300ms;
+}
+
+#pie h5{
+    display: block;
+    background: url(../img/fAside.png), white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    line-height: 55px;
+    color: black;
+}
+
+#pie p{
+    color: white;
+}
+
+#pie ul{
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+}
+
+#pie ul li{
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#pie ul li a{
+    display: block;
+    height: 35px;
+
+}
+
+#pie iframe{
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px gray;
 }
