@@ -40,9 +40,13 @@ body {
     margin: 0px auto;
 }
 
+.clearfix{
+    float: none;
+    clear: both;
+}
 /* cambio en el estilo de la fuente, para cobertir la letra en un simbolo de endrenage */
 
-.engrenaje {
+.engrenaje, .icon {
     font-family: WebSymbolsRegular;
 }
 
@@ -174,14 +178,17 @@ colores, fondos, transiciones.
     overflow: hidden;
     margin: 115px;
     margin-top: 40px;
+    margin-bottom: 35px;
     cursor: pointer;
 }
 
-/* le quito el margen izquierdo a la ultima tarjeta */
+/* le quito el margen derecho a la ultima tarjeta */
 
 .card:last-child {
     margin-right: 0px;
 }
+
+/* le quito el margen izquierdo a la primera tarjeta */
 
 #cards>.card {
     margin-left: 12px;
@@ -191,7 +198,6 @@ colores, fondos, transiciones.
     display: block;
     width: 60%;
     height: 180px;
-    margin-bottom: 50px;
     margin: 0px auto;
 }
 
@@ -206,10 +212,283 @@ colores, fondos, transiciones.
     color: #00538c;
 }
 
-.card .descripcion{
+.card .descripcion {
     text-align: center;
     color: #0084db;
     font-family: TrebuchetMs;
     font-size: 15px;
+}
 
+/* ---------------------------------------------------end---------------------------------------------------------------------------- */
+
+/* Maquetacion de la Barra Lateral o tambien llamada aside*/
+
+#lateral {
+    width: 300px;
+    min-height: 1200px;
+    font-family: TrebuchetMS;
+    float: Right;
+    margin: 13px;
+}
+
+aside h3 {
+    display: block;
+    width: auto;
+    height: 45px;
+    line-height: 46px;
+    background: url(../img/fAside.png);
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    font-size: 30px;
+    font-family: BebasNeue;
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* con la pseudclase firts-child le quito el margen topo de mi primer elemento h3 */
+
+aside h3:first-child {
+    margin-top: 0px;
+}
+
+#buscar {
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /* el efecto es con el cual le damos un efecto de profundida */
+    box-shadow: 1px 1px 4px #ccc inset;
+}
+
+/* realizado el diseño principalmente para la parte de la busqueda */
+
+#lateral input[type="text"] {
+    width: 85%;
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    transition: all 300ms;
+}
+
+#lateral input[type="text"]:focus {
+    color: #555;
+}
+
+/* estilo para el icono de busqueda */
+
+#lateral input[type="button"], #lateral input[type="submit"] {
+    height: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid #ccc;
+    color: #555;
+    padding-left: 7px;
+}
+
+/* estilo a las cajas de Login y Redes */
+
+.caja {
+    width: 85%;
+    height: 240px;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-top: 2px;
+    background: white;
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+/* estilo al formulario de login */
+
+#login input[type="email"], #login input[type="password"] {
+    display: block;
+    margin: 0px auto;
+    margin-top: 20px;
+    width: 82%;
+    height: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #ccc inset;
+    border-radius: 5px;
+    padding-left: 30px;
+    color: gray;
+}
+
+/* con el efecto focus me sirve cuando alguien esta escribiendo en el input me aplique los siguientes efectos: cambio de color y sombra */
+
+#login input[type="email"]:focus, #login input[type="password"]:focus {
+    color: #555;
+    box-shadow: 1px 1px 1px grey inset;
+}
+
+/* estilo para el logotipo de user y de password */
+
+#login #user, #login #password {
+    display: block;
+    text-align: center;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 6px;
+    height: 30px;
+}
+
+#login #password {
+    margin-left: 18;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+/* Estilo para los botones de login */
+#login input[type="submit"],
+#login input[type="button"],
+#login input[type="reset"],
+#login button{
+    /* display: block; */
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    margin-top: 20px;
+    color: white;
+    background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca);
+    border: 1px solid #156785;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: TrebuchetMS;
+    font-weight: lighter;
+    margin-left: 16px;
+    transition: all 300ms;
+}
+
+#login input[type="submit"]:hover,
+#login input[type="button"]:hover,
+#login input[type="reset"]:hover,
+#login button:hover{
+    box-shadow: 0px 0px 3px gray;
+}
+
+/* estilo para los enlaces de login */
+#login a{
+    display: block;
+    margin: 10px;
+    margin-left: 16px;
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+    
+}
+
+/* estilo a la caja de las redes sociales */
+#redes{
+    height: 185px;
+}
+#redes a{
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------------------------------------end------------------------------------------------------------------- */
+/* Aca Inicia la aplicaciones de estilo a la parte de los comentarios */
+/* estilo para la caja general de comentarios recientes */
+#comentariosR{
+    width: 850px;
+    float: left;
+
+}
+/* estilo para el titulo general de los comentarios */
+#comentariosR h2{
+    display: block;
+    width: 100%;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background: url(../img/fAside.png);
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    margin-top: 13px;
+    margin-bottom: 15px;
+}
+
+/* estilo a los articulo o comentarios recientes */
+#comentariosR article{
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 40px auto;
+    padding: 10px;
+    font-family: "TrebuchetMS";
+    background: white;
+    color: black;
+    box-shadow: 1px 1px 2px #ddd;
+}
+
+#comentariosR article h4{
+    display: block;
+    font-size: 23px;
+    margin: 3px;
+}
+
+#comentariosR article h4 a{
+    text-decoration: none;
+    color: #00538c;
+}
+
+#comentariosR article h4 a:hover{
+    text-decoration: underline;
+}
+
+#comentariosR .datos{
+    float: right;
+    background: #393d3f;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    margin: -10px;
+    padding: 4px;
+    font-size: 13px;
+    border-radius: 0px 0px 0px 5px;
+}
+
+#comentariosR .datos span{
+    margin: 5px;
+}
+
+#comentariosR article p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+#Mcomentarios{
+    height: 100px;
+    margin-top: 60px;
+    line-height: 100px;
+    text-align: center;
+    font-family: "BebasNeue";
+}
+
+#Mcomentarios a{
+    display: block;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #00538c;
+    text-decoration: none;
 }
