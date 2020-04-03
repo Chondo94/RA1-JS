@@ -63,10 +63,13 @@ body {
 }
 
 /* --------------------------------------------end------------------------------------------------- */
+// declaracion de variables
+$fuentePrimaria: "TrebuchetMs";
+$fuenteSecundaria: "BebasNeue";
+
 
 /* Maqutacion del Logotipo, de Bienvenida */
-
-#logotipo {
+#logotipo{
     float: left;
     width: 285px;
     background-color: #37bcf9;
@@ -77,23 +80,23 @@ body {
     cursor: pointer;
     overflow: hidden;
     transition: all 300ms;
-}
 
-#logotipo .engrenaje {
-    display: block;
-    float: left;
-    font-size: 30px;
-    margin-top: 8px;
-    margin-left: 12px;
-}
+    .engrenaje {
+        display: block;
+        float: left;
+        font-size: 30px;
+        margin-top: 8px;
+        margin-left: 12px;
+    }
 
-#logotipo h3 {
-    display: block;
-    float: right;
-    font-size: 40px;
-    margin-top: 5px;
-    margin-right: 25px;
-    transition: all 300ms;
+    h3 {
+        display: block;
+        float: right;
+        font-size: 40px;
+        margin-top: 5px;
+        margin-right: 25px;
+        transition: all 300ms;
+    }
 }
 
 /* --------------------------------------------end------------------------------------------------- */
@@ -104,35 +107,34 @@ con el fin de alinear la lista a la izquierda de la pantalla y poder agregarles
 colores, fondos, transiciones.
 */
 
-#menu {
+#menu{
     float: right;
     height: 70px;
     background: transparent;
-}
 
-#menu ul li {
-    font-size: 24px;
-    display: inline-block;
-    margin: 0px 20px 0px 20px;
-    letter-spacing: 1px;
-    line-height: 70px;
-}
+    ul li {
+        font-size: 24px;
+        display: inline-block;
+        margin: 0px 20px 0px 20px;
+        letter-spacing: 1px;
+        line-height: 70px;
 
-#menu ul li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    /*esta transicion  */
-    transition: all 300ms;
-}
-
-#menu ul li a:hover {
-    color: #37bcf9;
-    /*
-    con la animacion transform el texto se me aumenta de tamaño al momento de 
-    pasar el puntero sobre el texto. y el tiempo transcurrido es l que declare de 300ms.
-    */
-    transform: scale(1.5, 1.5);
+        a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            /*esta transicion  */
+            transition: all 300ms;
+        }
+        a:hover {
+            color: #37bcf9;
+            /*
+            con la animacion transform el texto se me aumenta de tamaño al momento de 
+            pasar el puntero sobre el texto. y el tiempo transcurrido es l que declare de 300ms.
+            */
+            transform: scale(1.5, 1.5);
+        }
+    }
 }
 
 /* -------------------------------------------end-------------------------------------------------- */
@@ -147,28 +149,23 @@ colores, fondos, transiciones.
     background: url(../img/bakbaner.png);
     background-position: -100px -100px;
     margin: 20px auto;
-}
 
-#banner h1 {
-    display: block;
-    width: 850px;
-    font-family: BebasNeue;
-    color: white;
-    text-align: center;
-    font-size: 62px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    /* Sombreado de texto */
-    text-shadow: 2px 2px 1px black;
-    margin: 20px auto;
+    h1 {
+        display: block;
+        width: 850px;
+        font-family: BebasNeue;
+        color: white;
+        text-align: center;
+        font-size: 62px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        /* Sombreado de texto */
+        text-shadow: 2px 2px 1px black;
+        margin: 20px auto;
+    }
 }
 
 /* maquetacion de las targetas */
-
-.card img {
-    width: 20px;
-}
-
 .card {
     float: left;
     width: 305px;
@@ -180,6 +177,36 @@ colores, fondos, transiciones.
     margin-top: 40px;
     margin-bottom: 35px;
     cursor: pointer;
+
+    img {
+        width: 20px;
+    }
+
+    .icono img {
+        display: block;
+        width: 60%;
+        height: 180px;
+        margin: 0px auto;
+    }
+
+    .categoria {
+        width: 100%;
+        height: 50px;
+        font-family: TrebuchetMs;
+        font-size: 21px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 50px;
+        color: #00538c;
+    }
+
+    .descripcion {
+        text-align: center;
+        color: #0084db;
+        font-family: TrebuchetMs;
+        font-size: 15px;
+    }
+    
 }
 
 /* le quito el margen derecho a la ultima tarjeta */
@@ -194,30 +221,6 @@ colores, fondos, transiciones.
     margin-left: 12px;
 }
 
-.card .icono img {
-    display: block;
-    width: 60%;
-    height: 180px;
-    margin: 0px auto;
-}
-
-.card .categoria {
-    width: 100%;
-    height: 50px;
-    font-family: TrebuchetMs;
-    font-size: 21px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 50px;
-    color: #00538c;
-}
-
-.card .descripcion {
-    text-align: center;
-    color: #0084db;
-    font-family: TrebuchetMs;
-    font-size: 15px;
-}
 
 /* ---------------------------------------------------end---------------------------------------------------------------------------- */
 
@@ -229,6 +232,34 @@ colores, fondos, transiciones.
     font-family: TrebuchetMS;
     float: Right;
     margin: 13px;
+
+    /* realizado el diseño principalmente para la parte de la busqueda */
+
+    input[type="text"] {
+    width: 85%;
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    transition: all 300ms;
+    }
+
+    input[type="text"]:focus {
+        color: #555;
+    }
+
+    input[type="button"], #lateral input[type="submit"] {
+        height: 30px;
+        cursor: pointer;
+        font-size: 16px;
+        background-color: transparent;
+        border: none;
+        border-left: 1px solid #ccc;
+        color: #555;
+        padding-left: 7px;
+    }
 }
 
 aside h3 {
@@ -264,36 +295,6 @@ aside h3:first-child {
     box-shadow: 1px 1px 4px #ccc inset;
 }
 
-/* realizado el diseño principalmente para la parte de la busqueda */
-
-#lateral input[type="text"] {
-    width: 85%;
-    height: 30px;
-    border: none;
-    padding-left: 5px;
-    border-radius: 5px;
-    background-color: transparent;
-    color: white;
-    transition: all 300ms;
-}
-
-#lateral input[type="text"]:focus {
-    color: #555;
-}
-
-/* estilo para el icono de busqueda */
-
-#lateral input[type="button"], #lateral input[type="submit"] {
-    height: 30px;
-    cursor: pointer;
-    font-size: 16px;
-    background-color: transparent;
-    border: none;
-    border-left: 1px solid #ccc;
-    color: #555;
-    padding-left: 7px;
-}
-
 /* estilo a las cajas de Login y Redes */
 
 .caja {
@@ -308,8 +309,8 @@ aside h3:first-child {
 }
 
 /* estilo al formulario de login */
-
-#login input[type="email"], #login input[type="password"] {
+#login{ 
+    input[type="email"], input[type="password"] {
     display: block;
     margin: 0px auto;
     margin-top: 20px;
@@ -320,37 +321,31 @@ aside h3:first-child {
     border-radius: 5px;
     padding-left: 30px;
     color: gray;
-}
+    }
 
-/* con el efecto focus me sirve cuando alguien esta escribiendo en el input me aplique los siguientes efectos: cambio de color y sombra */
+    input[type="email"]:focus, input[type="password"]:focus {
+        color: #555;
+        box-shadow: 1px 1px 1px grey inset;
+    }
+    #user, #password {
+        display: block;
+        text-align: center;
+        position: absolute;
+        margin-left: 15px;
+        margin-top: 6px;
+        height: 30px;
+    }
 
-#login input[type="email"]:focus, #login input[type="password"]:focus {
-    color: #555;
-    box-shadow: 1px 1px 1px grey inset;
-}
+    #password {
+        margin-left: 18;
+        margin-top: 25px;
+        font-size: 20px;
+    }
 
-/* estilo para el logotipo de user y de password */
-
-#login #user, #login #password {
-    display: block;
-    text-align: center;
-    position: absolute;
-    margin-left: 15px;
-    margin-top: 6px;
-    height: 30px;
-}
-
-#login #password {
-    margin-left: 18;
-    margin-top: 25px;
-    font-size: 20px;
-}
-
-/* Estilo para los botones de login */
-#login input[type="submit"],
-#login input[type="button"],
-#login input[type="reset"],
-#login button{
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"],
+    button{
     /* display: block; */
     text-align: center;
     width: 100px;
@@ -366,17 +361,17 @@ aside h3:first-child {
     font-weight: lighter;
     margin-left: 16px;
     transition: all 300ms;
-}
+    }
 
-#login input[type="submit"]:hover,
-#login input[type="button"]:hover,
-#login input[type="reset"]:hover,
-#login button:hover{
+    input[type="submit"]:hover,
+    input[type="button"]:hover,
+    input[type="reset"]:hover,
+    button:hover{
     box-shadow: 0px 0px 3px gray;
-}
+    }
 
-/* estilo para los enlaces de login */
-#login a{
+    /* estilo para los enlaces de login */
+    a{
     display: block;
     margin: 10px;
     margin-left: 16px;
@@ -385,12 +380,13 @@ aside h3:first-child {
     font-size: 15px;
     
 }
+}
 
 /* estilo a la caja de las redes sociales */
 #redes{
     height: 185px;
-}
-#redes a{
+
+    a{
     display: block;
     color: #333;
     text-decoration: none;
@@ -398,6 +394,7 @@ aside h3:first-child {
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
+    }
 }
 
 
@@ -408,72 +405,71 @@ aside h3:first-child {
     width: 850px;
     float: left;
 
-}
-/* estilo para el titulo general de los comentarios */
-#comentariosR h2{
-    display: block;
-    width: 100%;
-    height: 75px;
-    line-height: 75px;
-    text-align: center;
-    font-family: "BebasNeue";
-    font-size: 40px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    background: url(../img/fAside.png);
-    box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
-    margin-top: 13px;
-    margin-bottom: 15px;
-}
+    h2{
+        display: block;
+        width: 100%;
+        height: 75px;
+        line-height: 75px;
+        text-align: center;
+        font-family: "BebasNeue";
+        font-size: 40px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        background: url(../img/fAside.png);
+        box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+        margin-top: 13px;
+        margin-bottom: 15px;
+    }
 
-/* estilo a los articulo o comentarios recientes */
-#comentariosR article{
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    margin: 40px auto;
-    padding: 10px;
-    font-family: "TrebuchetMS";
-    background: white;
-    color: black;
-    box-shadow: 1px 1px 2px #ddd;
-}
+    article{
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        margin: 40px auto;
+        padding: 10px;
+        font-family: "TrebuchetMS";
+        background: white;
+        color: black;
+        box-shadow: 1px 1px 2px #ddd;
 
-#comentariosR article h4{
-    display: block;
-    font-size: 23px;
-    margin: 3px;
-}
+        h4{
+            display: block;
+            font-size: 23px;
+            margin: 3px;
 
-#comentariosR article h4 a{
-    text-decoration: none;
-    color: #00538c;
-}
+            a{
+                text-decoration: none;
+                color: #00538c;
+            }
 
-#comentariosR article h4 a:hover{
-    text-decoration: underline;
-}
+            a:hover{
+                text-decoration: underline;
+            }
+        }
 
-#comentariosR .datos{
-    float: right;
-    background: #393d3f;
-    color: white;
-    height: 30px;
-    line-height: 30px;
-    margin: -10px;
-    padding: 4px;
-    font-size: 13px;
-    border-radius: 0px 0px 0px 5px;
-}
+        p{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+    }
 
-#comentariosR .datos span{
-    margin: 5px;
-}
+    .datos{
+        float: right;
+        background: #393d3f;
+        color: white;
+        height: 30px;
+        line-height: 30px;
+        margin: -10px;
+        padding: 4px;
+        font-size: 13px;
+        border-radius: 0px 0px 0px 5px;
 
-#comentariosR article p{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 15px;
+        span{
+            margin: 5px;
+        }
+    }
+
 }
 
 /* estilo para el boton de mas comentarios */
@@ -483,16 +479,17 @@ aside h3:first-child {
     line-height: 100px;
     text-align: center;
     font-family: "BebasNeue";
+
+    a{
+        display: block;
+        font-family: "BebasNeue";
+        font-size: 40px;
+        letter-spacing: 3px;
+        color: #00538c;
+        text-decoration: none;
+    }
 }
 
-#Mcomentarios a{
-    display: block;
-    font-family: "BebasNeue";
-    font-size: 40px;
-    letter-spacing: 3px;
-    color: #00538c;
-    text-decoration: none;
-}
 /* ---------------------------------------------end--------------------------------------------- */
 /* Maquetacion del pie de pagina footer */
 #pie{
@@ -501,63 +498,64 @@ aside h3:first-child {
     background-color: black;
     color: white;
     overflow: hidden;
+
+    .wrap > div{
+        float: left;
+        width: 470px;
+        height: 370px;
+        margin:40px;
+        text-align: center;
+        color: white;
+        font-family: "TrebuchetMS";
+    }
+
+    a{
+        text-decoration: none;
+        color:#37bcf9;
+        transition: all 300ms;
+    }
+
+    h5{
+        display: block;
+        background: url(../img/fAside.png), white;
+        height: 50px;
+        letter-spacing: 2px;
+        text-align: center;
+        font-family: "BebasNeue";
+        font-size: 40px;
+        line-height: 55px;
+        color: black;
+    }
+
+    p{
+        color: white;
+    }
+
+    ul{
+        text-align: left;
+        margin: 20px;
+        font-size: 25px;
+
+        li{
+            margin-top: 10px;
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+
+            a{
+                display: block;
+                height: 35px;
+            
+            }
+        }
+    }
+
+    iframe{
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 5px solid white;
+        box-shadow: 0px 0px 5px gray;
+    }
 }
 
-#pie .wrap > div{
-    float: left;
-    width: 470px;
-    height: 370px;
-    margin:40px;
-    text-align: center;
-    color: white;
-    font-family: "TrebuchetMS";
-}
-
-#pie a{
-    text-decoration: none;
-    color:#37bcf9;
-    transition: all 300ms;
-}
-
-#pie h5{
-    display: block;
-    background: url(../img/fAside.png), white;
-    height: 50px;
-    letter-spacing: 2px;
-    text-align: center;
-    font-family: "BebasNeue";
-    font-size: 40px;
-    line-height: 55px;
-    color: black;
-}
-
-#pie p{
-    color: white;
-}
-
-#pie ul{
-    text-align: left;
-    margin: 20px;
-    font-size: 25px;
-}
-
-#pie ul li{
-    margin-top: 10px;
-    padding: 5px;
-    border-bottom: 1px solid #ccc;
-}
-
-#pie ul li a{
-    display: block;
-    height: 35px;
-
-}
-
-#pie iframe{
-    width: 100%;
-    height: 300px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 5px solid white;
-    box-shadow: 0px 0px 5px gray;
-}
