@@ -70,13 +70,13 @@ $fuenteSecundaria: "BebasNeue";
 
 /* Maqutacion del Logotipo, de Bienvenida */
 #logotipo{
-    float: left;
-    width: 285px;
-    background-color: #37bcf9;
-    text-align: center;
-    margin-top: 8px;
-    margin-left: 20px;
-    letter-spacing: 1px;
+    float:left;
+    width:285px;
+    background-color:#37bcf9;
+    text-align:center;
+    margin-top:8px;
+    margin-left:20px;
+    letter-spacing:1px;
     cursor: pointer;
     overflow: hidden;
     transition: all 300ms;
@@ -97,6 +97,12 @@ $fuenteSecundaria: "BebasNeue";
         margin-right: 25px;
         transition: all 300ms;
     }
+}
+
+#logotipo:hover{
+    border-radius: 2px;
+    color:black;
+    background-color:#ccc;
 }
 
 /* --------------------------------------------end------------------------------------------------- */
@@ -177,6 +183,8 @@ colores, fondos, transiciones.
     margin-top: 40px;
     margin-bottom: 35px;
     cursor: pointer;
+    // transicion para que pueda funcionar la animacion que le estoy aplicando a la targetas en el archivo animaciones
+    transition: 300ms;
 
     img {
         width: 20px;
@@ -187,6 +195,7 @@ colores, fondos, transiciones.
         width: 60%;
         height: 180px;
         margin: 0px auto;
+        transition: all 300ms;
     }
 
     .categoria {
@@ -198,6 +207,7 @@ colores, fondos, transiciones.
         text-align: center;
         line-height: 50px;
         color: #00538c;
+        transition: all 400ms;
     }
 
     .descripcion {
@@ -205,6 +215,8 @@ colores, fondos, transiciones.
         color: #0084db;
         font-family: TrebuchetMs;
         font-size: 15px;
+        transition: all 500ms;
+
     }
     
 }
@@ -395,6 +407,30 @@ aside h3:first-child {
     margin-top: 10px;
     margin-bottom: 20px;
     }
+// transicion para los iconos de redes sociales, esta es una parte que se trabajo los elementos p
+    .overplay{
+        display: block;
+        height: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 1px #ccc;
+        border: 3px solid white;
+        box-shadow: 0px 0px 4px #ccc;
+        background: #f4f7fe;
+        position: absolute;
+        padding: 5px;
+        margin-left: 70px;
+        margin-top: -52px;
+        transform: translateX(-80%);
+        opacity: 0;
+        transition: 500ms;
+    }
+}
+// esta es la otra parte para darle vida a la transicion de los iconos de redes sociales.
+#redes div:hover .overplay{
+    opacity: 1;
+    transform: translateX(0%);
 }
 
 
@@ -479,6 +515,8 @@ aside h3:first-child {
     line-height: 100px;
     text-align: center;
     font-family: "BebasNeue";
+    // efectos para transicion
+    transition: all 1s;
 
     a{
         display: block;
@@ -489,7 +527,39 @@ aside h3:first-child {
         text-decoration: none;
     }
 }
+// esto es para los efectos de transicion de mas comentarios
+#Mcomentarios:hover{
+    background-color: #555;
+    border: 10px solid #37bcf9;
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px gray;
+    // animacion blink me sirve para que de un efeco como de parpadeo
+    animation: blink 4s infinite linear;
+}
 
+#Mcomentarios:hover a{
+    color: white;
+    text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black, 1px 4px 1px black, 1px 5px 1px black;
+}
+
+@keyframes blick{
+    0%{
+        border: 10px solid #37bcf9;
+    }
+    25%{
+        border: 10px solid green;
+    }
+    50%{
+        border: 10px solid yellow;
+    }
+    75%{
+        border: 10px solid white;
+    }
+    100%{
+        border: 10px solid #37bcf9;
+    }
+    
+}
 /* ---------------------------------------------end--------------------------------------------- */
 /* Maquetacion del pie de pagina footer */
 #pie{
@@ -544,8 +614,14 @@ aside h3:first-child {
             a{
                 display: block;
                 height: 35px;
+                // agregamos una transicion a los enlaces
+                transition: all 300ms;
             
             }
+        }
+        li:hover a{
+            color: white;
+            padding-left: 40px;
         }
     }
 

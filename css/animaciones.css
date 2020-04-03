@@ -1,0 +1,163 @@
+/* #logotipo .engrenaje{
+    animation-name: rotar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+#logotipo .engrenaje{
+    animation-name: fromBellow; 
+    animation-duration:3s; 
+    animation-fill-mode: linear;
+}
+@keyframes rotar{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: scaleZ(360deg);
+    }
+} */
+
+/* animacion para que el logo desaparesca y vuelva aparacer al al pasar el puntero encima del logo. */
+
+#logotipo:hover .engrenaje{
+    animation-name: fromBellow; 
+    animation-duration:1s; 
+    animation-fill-mode: linear;
+}
+
+@keyframes fromBellow{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+
+}
+
+/* animaciones a la palabra de bienvenida del logo, esto para que me aparezca de la derecha */
+
+#logotipo:hover h3{
+    animation-name: fromRight; 
+    animation-duration:1.2s; 
+    animation-fill-mode: linear;
+}
+
+@keyframes fromRight{
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+/* animacion para la parte del comentario 
+// animacion blink me sirve para que de un efeco como de parpadeo.
+*/
+#Mcomentarios:hover{
+    animation-name: blick; 
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: linear;
+}
+
+/* animaciomes de las tarjegas */
+
+.card:hover{
+    background: #37bcf3;
+}
+
+.card:hover .categoria {
+    color: white;
+    animation-name: showCateg; 
+    animation-duration:300ms;
+    animation-fill-mode: linear;
+}
+
+/* animacion para el texto de categoria */
+@keyframes showCateg{
+    from{
+        transform: translateY(-300%);
+        color: black;
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+.card:hover .descripcion{
+    color: white;
+    animation-name: showDescrip; 
+    animation-duration:300ms;
+    animation-fill-mode: linear;
+}
+
+/* animacion para el texto de descripcion */
+@keyframes showDescrip{
+    from{
+        transform: translateX(-300%);
+        color: black;
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+/* 
+La animacion de showImg, me sirve principalmente para causar el efecto de deslice de arriba mi imagen.
+*/
+.card:hover img{
+    width: 65%;
+    animation-name: showImg; 
+    animation-duration:300ms;
+    animation-fill-mode: linear;
+}
+
+@keyframes showImg{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+/* animacion al titulo principal de la pagina */
+#banner h1{
+    animation-name: TextEfec; 
+    animation-duration:1s;
+    animation-fill-mode: linear;
+}
+
+
+@keyframes TextEfec{
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        box-shadow: 1px 1px 2px black;
+        color: white;
+        opacity: 1;
+    }
+
+}

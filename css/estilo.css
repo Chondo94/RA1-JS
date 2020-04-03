@@ -85,6 +85,12 @@ body {
   transition: all 300ms;
 }
 
+#logotipo:hover {
+  border-radius: 2px;
+  color: black;
+  background-color: #ccc;
+}
+
 /* --------------------------------------------end------------------------------------------------- */
 /* 
 Maquetacion de la barra de navegacion, en la cual agrego los diferentes estilo
@@ -156,6 +162,7 @@ colores, fondos, transiciones.
   margin-top: 40px;
   margin-bottom: 35px;
   cursor: pointer;
+  transition: 300ms;
 }
 .card img {
   width: 20px;
@@ -165,6 +172,7 @@ colores, fondos, transiciones.
   width: 60%;
   height: 180px;
   margin: 0px auto;
+  transition: all 300ms;
 }
 .card .categoria {
   width: 100%;
@@ -175,12 +183,14 @@ colores, fondos, transiciones.
   text-align: center;
   line-height: 50px;
   color: #00538c;
+  transition: all 400ms;
 }
 .card .descripcion {
   text-align: center;
   color: #0084db;
   font-family: TrebuchetMs;
   font-size: 15px;
+  transition: all 500ms;
 }
 
 /* le quito el margen derecho a la ultima tarjeta */
@@ -352,6 +362,29 @@ aside h3:first-child {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+#redes .overplay {
+  display: block;
+  height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 1px #ccc;
+  border: 3px solid white;
+  box-shadow: 0px 0px 4px #ccc;
+  background: #f4f7fe;
+  position: absolute;
+  padding: 5px;
+  margin-left: 70px;
+  margin-top: -52px;
+  transform: translateX(-80%);
+  opacity: 0;
+  transition: 500ms;
+}
+
+#redes div:hover .overplay {
+  opacity: 1;
+  transform: translateX(0%);
+}
 
 /* ------------------------------------------------------------end------------------------------------------------------------------- */
 /* Aca Inicia la aplicaciones de estilo a la parte de los comentarios */
@@ -425,6 +458,7 @@ aside h3:first-child {
   line-height: 100px;
   text-align: center;
   font-family: "BebasNeue";
+  transition: all 1s;
 }
 #Mcomentarios a {
   display: block;
@@ -435,6 +469,36 @@ aside h3:first-child {
   text-decoration: none;
 }
 
+#Mcomentarios:hover {
+  background-color: #555;
+  border: 10px solid #37bcf9;
+  border-radius: 240px;
+  box-shadow: 0px 0px 10px gray;
+  animation: blink 4s infinite linear;
+}
+
+#Mcomentarios:hover a {
+  color: white;
+  text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black, 1px 4px 1px black, 1px 5px 1px black;
+}
+
+@keyframes blick {
+  0% {
+    border: 10px solid #37bcf9;
+  }
+  25% {
+    border: 10px solid green;
+  }
+  50% {
+    border: 10px solid yellow;
+  }
+  75% {
+    border: 10px solid white;
+  }
+  100% {
+    border: 10px solid #37bcf9;
+  }
+}
 /* ---------------------------------------------end--------------------------------------------- */
 /* Maquetacion del pie de pagina footer */
 #pie {
@@ -485,6 +549,11 @@ aside h3:first-child {
 #pie ul li a {
   display: block;
   height: 35px;
+  transition: all 300ms;
+}
+#pie ul li:hover a {
+  color: white;
+  padding-left: 40px;
 }
 #pie iframe {
   width: 100%;
