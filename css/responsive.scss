@@ -1,0 +1,357 @@
+// diseño responsivo para escritorio y pantallas pequeñas
+  @media (max-width:1250px){
+        .wrap{
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .card{
+            width: 29.4%;
+            // height: 355px;
+            margin: 3.4%;
+        }
+
+        #comentariosR{
+            width: 60%;
+        }
+
+        #comentariosR article {
+            width: 97%;
+        }
+
+        #pie .wrap > div{
+            width: 40%;
+        }
+
+        #pie h5{
+            font-size: 30px;
+        }
+
+        #card p{
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+    }
+
+    @media (max-width:905px){
+        #comentariosR{
+            width: 54%;
+        }
+        .card{
+            width: 28.4%;
+            // height: 355px;
+            margin: 3.4%;
+        }
+        #pie .wrap > div{
+            width: 30%;
+        }
+
+        #logotipo{
+            width: 32%;
+            margin-top: 11px;
+            h3{
+                font-size: 35px;
+            }
+            .engrenaje {
+                font-size: 26px;
+                margin-left: 17px;
+        }
+        #pie .wrap > div{
+            margin-right: 14%;
+        }
+    }
+
+    #banner h1{
+        font-size: 45px;
+    }
+    }
+
+
+    @media (max-width:802px){
+        #lateral h3{
+            font-size: 20px;
+        }
+
+        #banner h1{
+            font-size: 40px;
+        }
+
+        #menu ul li{
+            font-size: 20px;
+        }
+
+    }
+
+    @media (max-width:724px){
+        #header{
+            width: 100%;
+            height: 150px;
+        }
+
+        #menu{
+            clear: both;
+            float: left;
+            width: 90%;
+            margin: 0px auto;
+
+            ul li{
+                font-size: 25px;
+            }
+        }
+        
+        #logotipo {
+            width: 33%;
+        }
+
+        #banner{
+            height: 86px;
+
+            h1{
+                margin-left: -110px;
+            }
+        }
+
+        #Mcomentarios a{
+            font-size: 33px;
+        }
+
+        .caja {
+            width: 85%;
+            height: 270px;
+        }
+
+        #comentariosR {
+            width: 48%;
+            
+            h2{
+                font-size: 32px;
+                letter-spacing: 0px;
+            }
+        }
+
+        #Mcomentarios{
+        line-height: 65px;
+        }
+
+        #pie{
+            ul{
+                font-size: 20px;
+            }
+
+            h5{
+                height: 34px;
+                font-size: 25px;
+                line-height: 38px;
+            }
+        }
+
+        #lateral {
+            width: 279px;
+        }
+
+    }
+
+    @media (max-width:740px){
+        #header{
+            width: 100%;
+            height: 150px;
+        }
+
+        #menu{
+            clear: both;
+            float: left;
+            width: 90%;
+            margin: 0px auto;
+
+            ul li{
+                font-size: 25px;
+            }
+        }
+        
+        #logotipo {
+            width: 33%;
+        }
+
+        #banner{
+            height: 86px;
+
+            h1{
+                margin-left: -110px;
+            }
+        }
+
+        #Mcomentarios a{
+            font-size: 33px;
+        }
+
+        .caja {
+            width: 85%;
+            height: 270px;
+        }
+
+        #comentariosR {
+            width: 48%;
+            
+            h2{
+                font-size: 32px;
+                letter-spacing: 0px;
+            }
+        }
+
+        #Mcomentarios{
+        line-height: 65px;
+        }
+
+        #pie{
+            ul{
+                font-size: 20px;
+            }
+
+            h5{
+                height: 34px;
+                font-size: 25px;
+                line-height: 38px;
+            }
+        }
+
+        #lateral {
+            width: 279px;
+        }
+
+    }
+
+    @media (max-width: 786px){
+        #comentariosR {
+            width: 51%;
+        }
+    }
+
+    @media (max-width: 690px){
+        #comentariosR {
+            width: 50%;
+        }
+    }
+
+    
+    @media (max-width: 660px){
+        #banner{
+            h1{
+            font-size: 30px;
+            }
+        }
+        
+        #lateral{
+            float: none;
+            width: 100%;
+            margin: 0px auto;
+            min-height: auto;
+            margin-top: 20px;
+
+            input[type="text"]{
+                width: 92%;
+            }
+        }
+        
+        #comentariosR{
+            float: none;
+            width: 100%;
+            margin: 0px auto;
+            min-height: auto;
+        }
+
+        .card{ 
+            width: 30.1%;
+            height: 268px;
+        .icono img{
+            height: 141px;
+            }
+            
+        }
+
+        #cards > .card{
+            margin-left: 3px;
+        }
+
+        .caja{
+            width: 95%;
+        }
+
+        #pie {
+            padding-bottom: 20px;
+            height: auto;
+            .wrap > div{
+                width: 100%;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+           
+            h5{
+                font-size: 25px;
+            }
+
+            #localizacion{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        #logotipo {
+            width: 36%;
+        }
+
+        #header {
+            width: 100%;
+            height: 128px;
+        }
+
+        #banner h1 {
+            font-size: 35px;
+            margin-left: -138px;
+
+        }
+        
+    }
+
+
+
+    @media (max-width:360px){
+        #logotipo {
+            width: 45%;
+                h3 {
+                font-size: 21px;
+                }
+                .engrenaje {
+                    font-size: 18px;
+                    margin-left: 8px;
+                    margin-top: 4px;
+                }
+        }
+
+        #menu ul li{
+                font-size: 17px;
+                letter-spacing: 0px;
+                line-height: 61px;
+                margin-right: 2px;
+        }
+
+        #header {
+            height: 100px;
+        }
+
+        #banner {
+            height: 61px;
+
+            h1 {
+                font-size: 26px;
+                margin-left: -272px;
+            }
+        }
+
+        .card {
+            width: 29.6%;
+            height: 188px;
+        }
+    }
